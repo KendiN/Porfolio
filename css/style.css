@@ -79,6 +79,7 @@ color: var(--main-color);
     display: none;
 }
 
+/* home section */
 .home {
     display: flex;
     justify-content: center;
