@@ -204,6 +204,7 @@ span {
     align-items: baseline;
     font-size: 1.5rem;
     font-weight: 300;
+    padding-left: 3rem;
 }
 
 .skills__group {
