@@ -14,9 +14,9 @@
 :root {
 
     /* defining the color scheme*/
-    --bg-color: #ffffff;
+    --bg-color: #0a0104;
     --second-bg-color: #f9c3d8;
-    --text-color: #0a0104;
+    --text-color: #ffffff;
     --main-color: #ea1159;
     --secondary-color: #02f2f0;
 }
@@ -49,6 +49,10 @@ section {
     z-index: 100;
 }
 
+.header .sticky {
+    border-bottom: .1rem solid rgba(0,0,0,.2);
+}
+
 .logo {
     font-size: 1.8rem;
     color: var(--text-color);
@@ -70,7 +74,7 @@ color: var(--main-color);
 
 .navbar a:hover,
 .navbar a.active {
-    color: var(--secondary-color);
+    color: var(--main-color);
 }
 
 #menu-icon {
@@ -79,7 +83,6 @@ color: var(--main-color);
     display: none;
 }
 
-/* home section */
 .home {
     display: flex;
     justify-content: center;
@@ -89,6 +92,19 @@ color: var(--main-color);
 .home-img img {
     width: 35vw;
     padding-left: 3rem;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2.4rem);
+    }
+    100% {
+        transform: translateY(0);
+    }  
 }
 
 .home-content h3 {
@@ -155,7 +171,7 @@ span {
     color: var(--main-color);
 }
 
-/*About Section*/
+/*About section*/
 .about {
     display: flex;
     justify-content: center;
@@ -321,16 +337,21 @@ span {
     transition: .5s ease;
 }
 
+.projects-box:hover .projects-layer {
+    transform: translateY(0);
+}
+
+
 .projects-layer h4 {
     font-size: 2rem;
 }
 
 .projects-layer p {
-    font-size: 1rem;
+    font-size: 1.4rem;
     margin: .3rem 0 1rem;
 }
 
-.projects-layer a {
+/*.projects-layer a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -338,7 +359,7 @@ span {
     height: 5rem;
     background: var(--text-color);
     border-radius: 50%;
-}
+}*/
 
 .projects-layer a i {
     font-size: 1rem;
@@ -390,36 +411,36 @@ span {
 /* Footer*/
 
 .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
-    flex-wrap: wrap;
-    padding: 2rem 9%;
-    background: var(--main-color); 
- }
- 
- .footer-text p {
-     font-size: 1.6rem;
- }
- 
- .footer-iconTop a {
-     display: inline-flex;
-     justify-content: center;
-     align-items: center;
-     padding: .8rem;
-     background: var(--main-color);
-     border-radius: .8rem;
-     transition: .5s ease;
- }
- 
- .footer-iconTop a:hover {
-    box-shadow: 0 0 1rem var(--main-color); 
- }
- 
- .footer-iconTop a i {
-     font-size: 2.4rem;
-     color: var(--second-bg-color);
- }
+   display: flex;
+   justify-content: space-between;
+   align-items:center;
+   flex-wrap: wrap;
+   padding: 2rem 9%;
+   background: var(--main-color); 
+}
+
+.footer-text p {
+    font-size: 1.6rem;
+}
+
+.footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+
+.footer-iconTop a:hover {
+   box-shadow: 0 0 1rem var(--main-color); 
+}
+
+.footer-iconTop a i {
+    font-size: 2.4rem;
+    color: var(--second-bg-color);
+}
 
 /*Breakpoints*/
 @media (max-width: 1200px) {
